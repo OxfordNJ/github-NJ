@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .level{
+            width: 8px;
+            height: 300px;
+            transform: translateX(300px);
+            display: block;
+        }
+        .head{
+            width: 8px;
+            height: 5px;
+            margin-bottom: 5px;
+            transition: all linear 0.2s;
+            display: block;
+        }
+        .levelWrapper{
+            width: 8px;
+            margin-left: 2px;
+            height: 320px;
+            display: inline-block;
+        }
+        #stage{
+            height: 315px;
+            overflow: hidden;
+            position: relative;
+            display: block;
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+<div class="control-container">
+    <label>Choose a file to play:</label>
+    <input type="file" id="localRes"/>
+    <label>Or</label>
+    <button onclick="ctx.initWebResource()">Play Web Example</button>
+    <label>Web Resource load-progerss:</label><progress id="progress"></progress>
+    <button onclick="ctx.disconnect()">Disconnect</button>
+</div>
+<div id="stage"></div>
+<script src="app.js"></script>
+</body>
+</html>
